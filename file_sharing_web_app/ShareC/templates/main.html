@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>File sharing</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #031321;
+        font-family: consolas;
+      }
+      label {
+        cursor: pointer;
+        margin: 8vw;
+        width: 70vw;
+        max-width: 100vh;
+        text-decoration: none;
+        text-align: center;
+        display: inline-block;
+        font-size: 12vw;
+        background: #bee708;
+        color: #031321;
+        border: 2px solid #0aff0a;
+        border-top-left-radius: 10vw;
+        border-bottom-right-radius: 10vw;
+      }
+      a {
+        margin: 8vw;
+        width: 70vw;
+        max-width: 100vh;
+        text-decoration: none;
+        text-align: center;
+        display: inline-block;
+        font-size: 12vw;
+        background: #bee708;
+        color: #031321;
+        border: 2px solid #0aff0a;
+        border-top-left-radius: 10vw;
+        border-bottom-right-radius: 10vw;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="file" name="data" id="upload-btn" hidden />
+    <label for="upload-btn">Upload</label>
+    <a href="/recieve">Recieve</a>
+    <script src="/static/js/main.js"></script>
+  </body>
+</html>

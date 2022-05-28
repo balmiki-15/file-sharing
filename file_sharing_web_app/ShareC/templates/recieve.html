@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+    <title>Share-C</title>
+{% endblock %}
+
+{% block body %}
+    <div class="content" style="display: flex; flex-direction: column; justify-content: center; width:50%; margin:auto;">
+        <h1 style="text-align: center;">Recieved Files</h1>
+        <table border="1" cellspacing=0> 
+            <tr>
+                <th>Filename</th>
+                <th>Recieved</th>
+                <th>Actions</th>
+            </tr>
+            {% for r in recieved %}
+            <tr>
+                <td>{{ r.filename }}</td>
+                <td>{{ r.date }}</td>
+                <td>
+                    <a href="/delete/{{r.id}}">Delete</a>
+                    <br>
+                    <a href="{{r.recieved_file}}" download>Download</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}
